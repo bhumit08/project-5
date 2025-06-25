@@ -50,7 +50,9 @@ const App = () => {
         : [...prev, category]
     );
   };
-
+  products.filter((product)=>product.category=="men");
+  arr[1,2,3].includes(2);
+  
   const filteredProducts = selectedCategories.length === 0
     ? products
     : products.filter(product => selectedCategories.includes(product.category));
