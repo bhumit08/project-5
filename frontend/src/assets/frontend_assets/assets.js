@@ -72,6 +72,20 @@ import contact_img from './contact_img.png'
 import razorpay_logo from './razorpay_logo.png'
 import stripe_logo from './stripe_logo.png'
 import cross_icon from './cross_icon.png'
+import women_banner from './women_banner.jpg'
+import women_banner2 from './women_banner2.jpg'
+import hero_img_men from './hero_img_men.avif'
+import hero_img_kids from './hero_img_kids.jpg'
+import k1 from './k1.jpg'
+import k2 from './k2.jpg'
+import m1 from './m1.jpg'
+import m2 from './m2.jpg'
+import m3 from './m3.webp'
+import m4 from './m4.jpg'
+import w1 from './w1.jpg'
+import w2 from './w2.avif'
+import w3 from './w3.webp'
+import w4 from './w4.jpg'
 
 export const assets = {
     logo,
@@ -91,7 +105,12 @@ export const assets = {
     contact_img,
     razorpay_logo,
     stripe_logo,
-    cross_icon
+    cross_icon,
+    women_banner,
+    women_banner2,
+    hero_img_men,
+    hero_img_kids,
+    m1,m2,m3,m4,w1,w2,w3,w4,k1,k2
 }
 
 export const products = [
