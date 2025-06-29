@@ -28,7 +28,7 @@ const ClothingQuoteSection = () => {
   return (
     <div
       ref={ref}
-      className="min-h-screen bg-black text-white px-4 py-8 flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen bg-gradient-to-br from-[#f0f0f0] via-white to-[#e7e7e7] text-gray-800 px-4 py-8 flex items-center justify-center relative overflow-hidden"
     >
       {/* Left Image */}
       <motion.img
@@ -42,7 +42,6 @@ const ClothingQuoteSection = () => {
 
       {/* Right Image */}
       <motion.img
-        // src={assets.le2} 
         src='https://images.pexels.com/photos/1620760/pexels-photo-1620760.jpeg?cs=srgb&dl=pexels-vika-glitter-392079-1620760.jpg&fm=jpg'
         alt="Fashion item"
         className="hidden lg:block absolute right-8 top-1/2 w-48 h-72 object-cover rounded-xl shadow-lg transform -translate-y-1/2"
@@ -63,13 +62,18 @@ const ClothingQuoteSection = () => {
           alt="Clothing"
           className="w-full h-auto rounded-lg shadow-2xl"
         />
+        
+        {/* Overlay for better quote visibility */}
+        <div className="absolute inset-0 bg-black/30 rounded-lg backdrop-blur-[1px]"></div>
+
+        {/* Quote Text */}
         <motion.div
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center px-6"
           style={{
-            fontFamily: "'Great Vibes', cursive",
-            fontSize: '2.5rem',
-            textShadow: '3px 3px 12px rgba(0,0,0,0.7)',
-            lineHeight: '1.4',
+            fontFamily: "'Playfair Display', serif",
+            fontSize: '2rem',
+            textShadow: '2px 2px 6px rgba(0,0,0,0.6)',
+            lineHeight: '1.5',
           }}
           variants={quoteVariants}
           initial="hidden"

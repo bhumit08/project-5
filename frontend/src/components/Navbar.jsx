@@ -4,7 +4,7 @@ import { assets } from "../assets/frontend_assets/assets";
 
 const Navbar = () => {
   return (
-    <div className="flex items-center justify-evenly py-5 font-medium">
+    <div className="flex items-center justify-evenly py-5 font-medium bg-[#F1F1F0]">
         
         <Link to='/'><img src={assets.logo} alt="" className="w-36"/></Link>
 
@@ -26,7 +26,6 @@ const Navbar = () => {
           <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
         </NavLink>
       </ul>
-        
     </div>
   )
 }

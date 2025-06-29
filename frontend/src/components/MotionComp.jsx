@@ -16,7 +16,7 @@ const MotionComp = () => {
   });
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-12 px-8 py-14 bg-blue-50">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-12 px-8 py-14 bg-[#F1F1F0]">
       <motion.div
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}

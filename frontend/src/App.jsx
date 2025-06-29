@@ -11,6 +11,7 @@ const App = () => {
   return (
     <div>
       <Navbar/>
+      <hr className='border 2xl'/>
       <Routes>
          <Route path='/' element={<Home/>}/>
          <Route path='/about' element={<About/>}/>

@@ -36,8 +36,7 @@ const ProductItem = ({ id, image, name, price }) => {
         <img
           src={image[0]} //
           alt="image"
-          className="hover:scale-110 transition ease-in-out"
-        />
+          className="hover:scale-110 transition ease-in-out rounded-2xl"  />
       </div>
       <p className="pt-3 pb-1 text-sm">{name}</p>
       <p className="text-sm font-medium">{currency}{price}</p>
