@@ -82,10 +82,15 @@ import m1 from './m1.jpg'
 import m2 from './m2.jpg'
 import m3 from './m3.webp'
 import m4 from './m4.jpg'
+import m5 from './m5.jpg'
 import w1 from './w1.jpg'
 import w2 from './w2.avif'
 import w3 from './w3.webp'
 import w4 from './w4.jpg'
+import w5 from './w5.jpg'
+import w6 from './w6.jpg'
+import le1 from './le1.jpg'
+import le2 from './le2.jpg'
 
 export const assets = {
     logo,
@@ -110,7 +115,7 @@ export const assets = {
     women_banner2,
     hero_img_men,
     hero_img_kids,
-    m1,m2,m3,m4,w1,w2,w3,w4,k1,k2
+    m1,m2,m3,m4,m5,w1,w2,w3,w4,w5,w6,k1,k2,le1,le2
 }
 
 export const products = [
@@ -127,19 +132,19 @@ export const products = [
         bestseller: true,
         brand: "Zara"
     },
-    // {
-    //     _id: "aaaab",
-    //     name: "Men Round Neck Pure Cotton T-shirt",
-    //     description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
-    //     price: 200,
-    //     image: [p_img2_1,p_img2_2,p_img2_3,p_img2_4],
-    //     category: "Men",
-    //     subCategory: "Topwear",
-    //     sizes: ["M", "L", "XL"],
-    //     date: 1716621345448,
-    //     bestseller: true,
-    //     brand: "H&M"
-    // },
+    {
+        _id: "aaaab",
+        name: "Men Round Neck Pure Cotton T-shirt",
+        description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+        price: 200,
+        image: [p_img2_1,p_img2_2,p_img2_3,p_img2_4],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["M", "L", "XL"],
+        date: 1716621345448,
+        bestseller: true,
+        brand: "H&M"
+    },
     {
         _id: "aaaac",
         name: "Girls Round Neck Cotton Top",

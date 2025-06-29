@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
-import { abcContext } from '../context/shopContextProvider';
+// import { abcContext } from '../context/shopContextProvider'
+import {abcContext} from '../context/ShopContextProvider'
 
 const Collection = () => {
    const {products} = useContext(abcContext);

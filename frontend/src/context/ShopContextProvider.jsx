@@ -4,9 +4,11 @@ import { products } from "../assets/frontend_assets/assets";
 export const abcContext=createContext();
 
 const ShopContextProvider = (props) => {
+  const currency = '$';
 
 const value={
-  products
+  products,
+  currency,
 }
 
   return (
