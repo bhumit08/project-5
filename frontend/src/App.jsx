@@ -6,6 +6,7 @@ import Collection from './Pages/Collection'
 import Contact from './Pages/Contact'
 import Cart from './Pages/Cart'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
          <Route path='/contact' element={<Contact/>}/>
          <Route path='/cart' element={<Cart/>}/>
       </Routes>
+      <Footer/>
     </div>
   )
 }

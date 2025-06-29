@@ -8,6 +8,8 @@ import LatestCollection from '../components/LatestCollection'
 // import HeroVideo from "../components/HeroVideo";
 import BrandMarquee from "../components/BrandMarquee";
 import BestSeller from '../components/BestSeller'
+import OurPolicy from '../components/OurPolicy'
+import NewsLetterBox from '../components/NewsLetterBox'
 const Home = () => {
   return (
     <div>
@@ -15,11 +17,13 @@ const Home = () => {
       {/* <NewCollection/> */}
       <LatestCollection/>
       {/* <HeroCircleTex/> */}
-       <ClothingQuoteSection/>
           {/* <HeroVideo /> */}
              {/* <MotionComp/> */}
-             <BrandMarquee/>
              <BestSeller/>
+       <ClothingQuoteSection/>
+             {/* <BrandMarquee/> */}
+             <OurPolicy/>
+             <NewsLetterBox/>
 
     </div>
   )
