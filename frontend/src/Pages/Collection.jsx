@@ -84,7 +84,7 @@ const Collection = () => {
   },[sortType])
 
   return (
-    <div className="flex flex-col sm:flex-row sm:gap-10 pt-10 border-t">
+    <div className="flex flex-col sm:flex-row sm:gap-10 pt-10 border-t px-25">
       {/* filter option*/}
       <div className='min-w-60'>
         <p  onClick={()=>setShowFilter(!showfilter)}  className='my-2 text-xl flex items-center cursor-pointer gap-2'>FILTERS

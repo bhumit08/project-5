@@ -8,6 +8,10 @@ import Cart from './Pages/Cart'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Product from './Pages/Product'
+import PlaceOrder from './Pages/PlaceOrder'
+import Orders from './Pages/Orders' // ✅ match folder case
+
+
 
 const App = () => {
   return (
@@ -22,6 +26,9 @@ const App = () => {
          <Route path='/cart' element={<Cart/>}/>
          <Route path='/product/:productId' element={<Product/>}/>
          <Route path='/cart' element={<Cart/>}/>
+         <Route path='/place-order' element={<PlaceOrder/>}/>
+        <Route path='/orders' element={<Orders/>}/>
+
 
       </Routes>
       <Footer/>
