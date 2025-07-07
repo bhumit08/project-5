@@ -1,15 +1,27 @@
 import React, { useState } from 'react'
+import { backendURl } from '../App'
+import axios from 'axios'
+import { toast } from 'react-toastify'
 
-const Login = () => {
+const Login = ({setToken}) => {
     const[email,setEmail]=useState('')
     const[password,setPassword]=useState('')
   const onSubmitHandler=async(e)=>{
     try{
-      e.preventDefault()
-      console.log(email,password);
-    }catch(error){
+      e.preventDefault();
+      const response=await axios.post(backendURl + '/api/user/admin',{email,password})
+      console.log("Login response:", response.data);
+      // setEmail("");
+      // setPassword("")
+      if(response.data.success){
+        setToken(response.data.token)
+      }else{
+        toast.error(response.data.message)
+      }
+    }catch (error) {
+  console.log(error.response?.data || error.message);
+  toast.error(error.response?.data?.message || "Something went wrong");}
 
-    }
   }
   return (
     <div className='min-h-screen flex items-center justify-center w-full'>
