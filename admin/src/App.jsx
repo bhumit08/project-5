@@ -10,7 +10,8 @@ import List from './pages/List'
 import Orders from './pages/Orders'
 import Login from './components/Login'
 
-export const backendURl=import.meta.env.VITE_BACKEND_URL
+export const backendURL=import.meta.env.VITE_BACKEND_URL
+export const currency='$';
 
 const App = () => {
   const [token,setToken]=useState(localStorage.getItem('token')?localStorage.getItem('token'):'');
