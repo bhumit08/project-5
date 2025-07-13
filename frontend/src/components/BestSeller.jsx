@@ -9,10 +9,17 @@ const BestSeller = () => {
   const {products}=useContext(abcContext);
   const[bestseller,setBestSeller]=useState([]);
 
-  useEffect(()=>{
-    const bestProduct=products.filter((item)=>item.bestseller)
-    setBestSeller(bestProduct.slice(0,5))
-  },[])
+  // useEffect(()=>{
+  //   const bestProduct=products.filter((item)=>item.bestseller)
+  //   setBestSeller(bestProduct.slice(0,5))
+  // },[products])
+  useEffect(() => {
+  if (products && Array.isArray(products)) {
+    const bestProduct = products.filter((item) => item.bestseller);
+    setBestSeller(bestProduct.slice(0, 5));
+  }
+}, [products]);
+
   return (
     <div className='my-10'>
       <div className='text-center text-3xl py-8'>

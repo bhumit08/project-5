@@ -75,9 +75,9 @@ const Collection = () => {
 
   }
   useEffect(() => {
-    console.log("Applying filters after state change...");
+    // console.log("Applying filters after state change...");
     applyFilter();
-  }, [category, subcategory,search,showsearch]);
+  }, [category, subcategory,search,,products]);
 
   useEffect(()=>{
     sortProduct();

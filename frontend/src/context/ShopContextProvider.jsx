@@ -1,15 +1,20 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import { createContext } from 'react';
 import { products } from "../assets/frontend_assets/assets";
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 export const abcContext=createContext();
 
 const ShopContextProvider = (props) => {
   const currency = '$';
   const delivery_fee = 10;
+  const backendURL= import.meta.env.VITE_BACKEND_URL
   const [search, setSearch] = useState('');
   const [showsearch, setShowSearch] = useState(false);
   const [cartitems, setCartItems] = useState({});
+  // const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([]);
+
   const navigate=useNavigate();
 
   const addToCart = async (itemId, size) => {
@@ -81,6 +86,24 @@ const ShopContextProvider = (props) => {
   //   console.log("Updated Cart:", cartitems);
   // }, [cartitems]);
 
+  const getProductData=async()=>{
+      try{
+          const response=await axios.get(backendURL + '/api/product/list')
+          if(response.data.success){
+             setProducts(response.data.products);
+          }else{
+            toast.error(respose.data.message)
+          }
+      }catch(error){
+            console.log(error)
+            toast.error(error.message)
+      }
+  }
+
+  useEffect(()=>{
+    getProductData()
+  },[])
+
   const value = {
     products,
     currency,
@@ -95,6 +118,7 @@ const ShopContextProvider = (props) => {
     updateQuentity,
     getCartAmount,
     navigate,
+    backendURL
   };
 
   return (
