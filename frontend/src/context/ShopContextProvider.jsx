@@ -6,7 +6,7 @@ import axios from 'axios';
 export const abcContext=createContext();
 
 const ShopContextProvider = (props) => {
-  const currency = '$';
+  const currency = '₹';
   const delivery_fee = 10;
   const backendURL= import.meta.env.VITE_BACKEND_URL
   const [search, setSearch] = useState('');
@@ -34,7 +34,18 @@ const ShopContextProvider = (props) => {
           cartData[itemId][size] = 1;
         }
       } else {
-        cartData[itemId] = { [size]: 1 };
+        // cartData[itemId] = { [size]: 1 };
+        cartData[itemId]={}
+        cartData[itemId][size]=1;
+      }
+
+      if(token){
+        try{
+            axios.post(backendURL + '/api/cart/add',{itemId,size}, {headers:{token}})
+        }catch(error){
+            console.log(error)
+            toast.error(error.message)
+        }
       }
 
       return cartData;
@@ -63,6 +74,15 @@ const ShopContextProvider = (props) => {
     let cartData=structuredClone(cartitems);
     cartData[itemId][size]=quantity;
     setCartItems(cartData)
+
+    if(token){
+      try{
+          await axios.post(backendURL + '/api/cart/update',{itemId,size,quantity},{headers:{token}})
+      }catch(error){
+          console.log(error)
+          toast.error(error.message)
+      }
+    }
 
   }
 
@@ -101,6 +121,18 @@ const ShopContextProvider = (props) => {
       }
   }
 
+  const getUserCart=async(token)=>{
+      try{
+          const response=await axios.post(backendURL + '/api/cart/get',{},{headers:{token}})
+          if(response.data.success){
+            setCartItems(response.data.cartData)
+          }
+      }catch(error){
+          console.log(error)
+            toast.error(error.message)
+      }
+  }
+
   useEffect(()=>{
     getProductData()
   },[])
@@ -108,6 +140,7 @@ const ShopContextProvider = (props) => {
   useEffect(()=>{
     if(!token && localStorage.getItem('token')){
       setToken(localStorage.getItem('token'))
+      getUserCart(localStorage.getItem('token'))
     }
   })
 
