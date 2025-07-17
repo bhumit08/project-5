@@ -13,8 +13,8 @@ import Orders from './Pages/Orders';
 import Login from './Pages/Login';
 import Verify from './Pages/Verify';
 
-import { ToastContainer } from 'react-toastify'; // ✅ Toast import
-import 'react-toastify/dist/ReactToastify.css';  // ✅ Toast styles
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; 
 
 const App = () => {
   return (
