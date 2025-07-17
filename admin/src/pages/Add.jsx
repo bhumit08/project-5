@@ -29,7 +29,7 @@ const Add = ({token}) => {
           formData.append("category",category)
           // formData.append("subcategory",subcategory)
           formData.append("subcategory", subcategory);
-          formData.append("bestseller",bestseller)
+          formData.append("bestseller", bestseller ? "true" : "false");
           formData.append("size",JSON.stringify(size))
 
           image1 && formData.append("image1",image1)
