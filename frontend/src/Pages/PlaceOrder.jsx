@@ -6,7 +6,9 @@ import { abcContext } from '../context/ShopContextProvider';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { currency } from '../../../admin/src/App';
+// import { currency } from '../../../admin/src/App';
+import { currency } from '../../../shared/constants';
+console.log(currency);
 
 const PlaceOrder = () => {
   const {

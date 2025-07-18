@@ -51,7 +51,8 @@ import React, { useEffect, useContext } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { abcContext } from '../context/ShopContextProvider';
 import axios from 'axios';
-import { backendURL } from '../../../admin/src/App';
+// import { backendURL } from '../../../admin/src/App';
+const backendURL = import.meta.env.VITE_BACKEND_URL;
 import { toast } from 'react-toastify';
 
 const Verify = () => {

@@ -8,7 +8,8 @@ export const abcContext=createContext();
 const ShopContextProvider = (props) => {
   const currency = '₹';
   const delivery_fee = 10;
-  const backendURL= import.meta.env.VITE_BACKEND_URL
+  // const backendURL= import.meta.env.VITE_BACKEND_URL
+  const backendURL = import.meta.env.VITE_BACKEND_URL;
   const [search, setSearch] = useState('');
   const [showsearch, setShowSearch] = useState(false);
   const [cartitems, setCartItems] = useState({});
